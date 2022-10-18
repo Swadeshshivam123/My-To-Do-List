@@ -1,0 +1,515 @@
+/* CSS for all the elements of the linked HTML page. */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+  background-image: linear-gradient(to left bottom, #5407b1, #67007e, #600053, #4e0032, #35051b, #360819, #370c17, #381016, #57101b, #760c1c, #95071b, #b40414);
+}
+
+#container {
+    height: 90vh;
+    width: 90vw;;
+    margin: 5vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    transition: transform;
+    transition-delay: 0.1s;
+  }
+
+  #task-creation
+  {
+    height: 90%;
+    width: 44%;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+    background-image: radial-gradient(circle, #a5ed89, #8dee9a, #74eeac, #5aedbe, #40eccf, #49e9c9, #50e7c3, #57e4bd, #78dea1, #94d788, #aecf73, #c5c565);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform;
+    transition-delay: 0.3s;
+  }
+
+  #task-creation:hover
+  {
+    transform: scale(1.02);
+    background-image: linear-gradient(to left bottom, #09b5fc, #00cdff, #00e2ed, #00f2bf, #47fd81, #89fe62, #bafd44, #e6fa24, #ebf62e, #eff237, #f3ee3f, #f6ea46);
+    box-shadow: 8px 8px rgb(199, 156, 156), -1em 0 0.4em olive;
+  }
+
+  #heading1 {
+    width: 96%;
+    height: 10%;
+    background-image: linear-gradient(to left top, #edcfe0, #fabed0, #ffadb4, #ffa090, #ff9966, #fd9d50, #f6a337, #eaab13, #e9b808, #e6c500, #e1d301, #dbe00d);
+    box-sizing: border-box;
+    border: 3px solid grey;
+    border-radius: 20px;
+    margin-top: 2%;
+    transition: transform;
+    transition-delay: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #page-heading1 {
+    text-align: center;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 2.3rem;
+    margin: auto;
+  }
+  
+  #page-heading1:hover {
+    font-size: 2.4rem;
+  }
+  
+  #heading1:hover {
+    transform: scale(1.02);
+    background-image: linear-gradient(to left bottom, #54aefc, #65a7ff, #7d9eff, #9892ff, #b385fd, #da7be4, #f276c9, #ff76ae, #ff918f, #ffb285, #f2d194, #e3ebb7);
+    box-shadow: 5px lightgrey;
+  }
+
+  #todo-form
+  {
+     width: 96%;
+     height: 82%;
+    box-sizing: border-box;
+    border: 3px solid grey;
+    border-radius: 20px;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    transition: transform;
+    transition-delay: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    background-image: linear-gradient(to left top, #edcfe0, #fabed0, #ffadb4, #ffa090, #ff9966, #fd9d50, #f6a337, #eaab13, #e9b808, #e6c500, #e1d301, #dbe00d);
+    transition: transform;
+    transition-delay: 0.3s;
+  }
+
+  #todo-form:hover
+  {
+    transform: scale(1.01);
+    background-image: linear-gradient(to left bottom, #54aefc, #65a7ff, #7d9eff, #9892ff, #b385fd, #da7be4, #f276c9, #ff76ae, #ff918f, #ffb285, #f2d194, #e3ebb7);
+  }
+
+  #todo-form form
+  {
+    height: 100%;
+    width: 100%;
+  }
+
+  #form-details
+  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* background-color: goldenrod; */
+  }
+
+  #task-description, #task-category, #due-date
+  {
+    height: 25%;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+.task-label
+  {
+    width: 94%;
+    height: 40%;
+    box-sizing: border-box;
+    margin-top: 3%;
+  }
+
+  .task-label p
+  {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    font-family: cursive;
+    font-style: italic;
+    color: gray;
+    margin: auto 3px;
+    padding: 3px;
+    transition-delay: 0.2s;
+  }
+
+  .task-label p:hover
+  {
+    font-size: 1.9rem;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+  .input-class
+  {
+    width: 88%;
+    height: 60%;
+    background-image: linear-gradient(to left top, #d6eca0, #c9f0b3, #c1f4c5, #bef5d6, #c1f6e4, #c7f5e2, #cdf4e1, #d2f3e0, #dbefd3, #e6eaca, #f1e3c4, #fbddc3);
+    box-sizing: border-box;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+   margin-bottom: 4%;
+   transition: transform;
+
+  }
+
+  .input-class:hover
+  {
+    transform: scale(1.1);
+    background-image: linear-gradient(to right bottom, #fbf66d, #f1f887, #eaf9a0, #e5f9b7, #e5f8cc, #eef3ce, #f3eed2, #f4ebd8, #fae3d5, #fcdbd7, #f8d5df, #ebd2e8);
+  }
+
+
+#description, #category
+  {
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: grey;
+    font-style: italic;
+    font-family: cursive;
+  }
+
+  #date
+  {
+    height: 70%;
+    min-height: 38px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: grey;
+    font-style: italic;
+    font-family: cursive;
+  }
+
+
+  #add-task
+  {
+    height: 10%;
+    width: 96%;
+    display: flex;
+    align-items:center;
+    justify-content:end;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  #add-task-btn
+  {
+    width: 140px;
+  height: 50px;
+  padding: auto;
+  color: white;
+  font-size: 1.3rem;
+  font-family: cursive;
+  font-weight: bold;
+  background-image: radial-gradient(circle, #1a8f08, #199b0a, #18a80c, #15b50e, #11c211, #0fca19, #0bd220, #06da26, #07de30, #08e339, #09e742, #0aec4a);
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  transition: transform;
+  transition-delay: 0.1s;
+  }
+
+  #add-task-btn:hover {
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-decoration: wavy;
+    box-shadow: 5px lightgrey;
+    font-style: italic;
+  }
+
+  #hz-divider
+  {
+    /* width: 100% !important; */
+  height: 2px;
+  width: 94%;
+  background-color: grey;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  }
+
+  #task-display
+  {
+    max-height: 620.41px;
+    width: 44%;
+    height: auto;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+    background-image: radial-gradient(circle, #a5ed89, #8dee9a, #74eeac, #5aedbe, #40eccf, #49e9c9, #50e7c3, #57e4bd, #78dea1, #94d788, #aecf73, #c5c565);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: transform;
+    transition-delay: 0.3s;
+  }
+
+  #task-display:hover
+  {
+    transform: scale(1.02);
+    background-image: linear-gradient(to left bottom, #09b5fc, #00cdff, #00e2ed, #00f2bf, #47fd81, #89fe62, #bafd44, #e6fa24, #ebf62e, #eff237, #f3ee3f, #f6ea46);
+    box-shadow: 8px 8px rgb(199, 156, 156), -1em 0 0.4em olive;
+  }
+
+  #heading2 {
+    width: 96%;
+    height: 10%;
+    background-image: linear-gradient(to left top, #edcfe0, #fabed0, #ffadb4, #ffa090, #ff9966, #fd9d50, #f6a337, #eaab13, #e9b808, #e6c500, #e1d301, #dbe00d);
+    box-sizing: border-box;
+    border: 3px solid grey;
+    border-radius: 20px;
+    margin-top: 2%;
+    transition: transform;
+    transition-delay: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #page-heading2 {
+    text-align: center;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 2.3rem;
+    margin: auto;
+  }
+
+  #page-heading2:hover {
+    font-size: 2.4rem;
+  }
+  
+  #heading2:hover {
+    transform: scale(1.02);
+    /* background-image: url(https://images.wallpaperscraft.com/image/single/light_background_texture_69531_3840x2400.jpg); */
+    background-image: linear-gradient(to left bottom, #54aefc, #65a7ff, #7d9eff, #9892ff, #b385fd, #da7be4, #f276c9, #ff76ae, #ff918f, #ffb285, #f2d194, #e3ebb7);
+    box-shadow: 5px lightgrey;
+  }
+
+  #task-list
+  {
+    width: 96%;
+    height: auto;
+    /* max-height: 500.54px; */
+    max-height: 80%;
+   box-sizing: border-box;
+   border: 3px solid grey;
+   border-radius: 20px;
+   margin-top: 6%;
+   margin-bottom: 2%;
+   transition: transform;
+   transition-delay: 0.1s;
+   display: flex;
+   align-items: center;
+   justify-content:space-evenly;
+   flex-direction: column;
+   background-image: linear-gradient(to left top, #edcfe0, #fabed0, #ffadb4, #ffa090, #ff9966, #fd9d50, #f6a337, #eaab13, #e9b808, #e6c500, #e1d301, #dbe00d);
+   transition: transform;
+   transition-delay: 0.3s;
+  }
+
+  #task-list:hover
+  {
+    transform: scale(1.01);
+    background-image: linear-gradient(to left bottom, #54aefc, #65a7ff, #7d9eff, #9892ff, #b385fd, #da7be4, #f276c9, #ff76ae, #ff918f, #ffb285, #f2d194, #e3ebb7);
+  }
+
+  #delete-form
+  {
+      height: auto;
+      /* max-height: 485.5px; */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+
+
+#task-list-container
+{
+    width: 96%;
+    height: auto;
+    /* min-height: 150px; */
+    max-height: 421.8px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+.task
+{
+    height: auto;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 15px;
+}
+
+#div1
+{
+    height: 80%;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.checkbox
+{
+    height: 60%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+#cbx
+{
+    height: 18px;
+    width: 18px;
+    border: 3px solid gray;
+    color: beige;
+    border-radius: 10px;
+    transition: transform;
+    transition-delay: 0.2s;
+}
+
+#cbx:hover
+{
+    transform: scale(1.1);
+    color: green;
+}
+
+#span-td
+{
+    padding: 3px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: grey;
+    font-style: italic;
+    font-family: cursive;
+    transition: transform;
+    transition-delay: 0.2s;
+}
+
+#span-td:hover
+{
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.date-task
+{
+    height: 30%;
+    width: auto;
+}    
+
+.date-task p
+{
+    font-size: 1rem;
+    font-weight: 600;
+    color:darkgreen;
+    font-family:cursive;
+    transition: transform;
+    transition-delay: 0.2s;
+}
+
+.date-task p:hover
+{
+    font-size: 1.1rem;
+    color: rgb(190, 8, 8);
+    font-style: italic;  
+    text-decoration: underline;
+}
+
+.category-task
+{
+  background-image: linear-gradient(to right top, #4f062f, #4b0e3a, #441645, #3a1d4e, #2c2456, #3e2961, #512e6b, #653374, #9e3371, #ca3c5e, #e55c40, #e88713);
+    height: 30px;
+    width: 90px;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-weight: bold;
+    border: 3px solid whitesmoke;
+  border-radius: 10px;
+  transition: transform;
+  transition-delay: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-task:hover
+{
+   transform: scale(1.1);
+    background-image: linear-gradient(to left top, #bf0fc0, #726af2, #0092ff, #00acf0, #00bed6, #00c2ba, #40c293, #76be69, #99af4e, #b49e43, #c78c46, #d17b55);
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+
+  #del-tasks
+  {
+    /* height: 48.71px; */
+    height: 55px;
+    width: 310.83px;
+    display: flex;
+    align-items:center;
+    justify-content:end;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  #del-task-btn
+  {
+    width: 170px;
+  height: 50px;
+  padding: auto;
+  color: white;
+  font-size: 1.3rem;
+  font-family: cursive;
+  font-weight: bold;
+  background-image: radial-gradient(circle, #f80000, #f7020b, #f50413, #f4081a, #f20c20, #f10828, #f00730, #ee0837, #ec0641, #ea0a4b, #e71054, #e3185d);
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  transition: transform;
+  transition-delay: 0.1s;
+  }
+
+  #del-task-btn:hover {
+    transform: scale(1.1);
+    font-size: 1.5rem;
+    text-decoration: wavy;
+    box-shadow: 5px lightgrey;
+    font-style: italic;
+  }

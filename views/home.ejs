@@ -1,0 +1,158 @@
+<!-- HTML file for the To DO List App - created by Swadesh Shivam.!!! -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    
+    <!-- Importing script for using font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/0d4ea2bed4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Linking css file for this HTML page. -->
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    
+    <!-- Head container -->
+    <div id="container">
+        
+        <!-- Container for creating tasks, -->
+        <div id="task-creation">
+            <!-- Heading for taks creation -->
+            <div id="heading1">
+          <h1 id="page-heading1">
+            <i class="fa-solid fa-rectangle-list"></i>&nbsp;&nbsp;To Do List
+          </h1>
+        </div>
+
+        <!-- Submission form for creating tasks. -->
+        <div id="todo-form">
+          <form action="/create-task" method="POST">
+            <div id="form-details">
+                 <!-- Description of the task to be done.
+                 -->
+                <div id="task-description">
+                <label for="description" class="task-label"><p>TASK</p></label>
+                <br />
+                <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  class="input-class"
+                  placeholder="Write your task here..."
+                  required
+                />
+              </div>
+
+              <!-- Horizontal divider. -->
+              <div id="hz-divider"></div>
+
+              <!-- Category of the task wit multiple select options. -->
+              <div id="task-category">
+                <label for="category" class="task-label"><p>CATEGORY</p></label>
+                <br />
+                <select
+                  name="category"
+                  id="category"
+                  class="input-class"
+                  required
+                >
+                  <option value="" selected class="options">
+                    Choose a category
+                  </option>
+                  <option value="Personal" class="options">Personal</option>
+                  <option value="Work" class="options">Work</option>
+                  <option value="School" class="options">School</option>
+                  <option value="Cleaning" class="options">Cleaning</option>
+                  <option value="Other" class="options">Other</option>
+                </select>
+              </div>
+
+              <!-- Horizontal divider. -->
+              <div id="hz-divider"></div>
+
+              <!-- Date and time for the task. -->
+              <div id="due-date">
+                <label for="date" class="task-label"><p>DUE DATE</p></label>
+                <br />
+                <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  class="input-class"
+                  required
+                />
+              </div>
+
+              <!-- Horizontal divider. -->
+              <div id="hz-divider"></div>
+
+              <!-- Add task button to submit the task created into the database. -->
+              <div id="add-task">
+                <button type="submit" id="add-task-btn">Add Task</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Container for displaying the task. -->
+      <div id="task-display">
+        
+        <!-- Heading for the task lists -->
+        <div id="heading2">
+          <h1 id="page-heading2">
+            <i class="fa-solid fa-list-check"></i>&nbsp;
+            Task List
+          </h1>
+        </div>
+
+        <div id="task-list">
+          <form action="/delete-task" method="POST" id="delete-form">
+            <!-- List of all the tasks created -->
+
+            <div id="task-list-container">
+                <!-- Looping for all the tasks in the tadabase to be diplayed here. -->
+              <% for(let i of task_list){%>
+              <div class="task">
+                <div id="div1">
+                  <div class="checkbox">
+                    <span><input type="checkbox" name="<%= i._id %>" id="cbx"/></span>&nbsp;
+                    <span id="span-td"><%= i.task %></span>
+                  </div>
+                  <div class="date-task">
+                    <p>&nbsp;<i class="fas fa-calendar-alt"></i>&nbsp;<%= i.date %></p>
+                  </div>
+                </div>
+                <div class="category-task">
+                  <span><%= i.category %></span>
+                </div>
+              </div>
+
+              <!-- Horizontal divider. -->
+              <div id="hz-divider"></div>
+
+              <% } %>
+            </div>
+
+
+            <!-- Delete button for deleting the tasks checked from the checkbox. -->
+            <div id="del-tasks">
+              <button id="del-task-btn" type="submit">Delete Tasks</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linkinh Javascript file for this HTML page. -->
+    <script src="/js/home.js"></script>
+  </body>
+</html>
